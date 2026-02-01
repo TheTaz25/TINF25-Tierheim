@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tierheim - Ein neues Zuhause finden</title>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="/">Tierheim TINF25B6</a>
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a>Unsere Tiere</a>
+        </li>
+        <li>
+          <a>Spenden</a>
+        </li>
+        <li>
+          <a href="/ueber-uns/">Über Uns</a>
+        </li>
+        <li>
+          <a href="/kontakt/">Kontakt</a>
+        </li>
+        <li>
+          <a>Jetzt Spenden</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- Linke Seite -->
+    <article>
+      <span></span>
+      <h1></h1>
+      <p></p>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+      <section>
+        <h2></h2>
+        <p></p>
+      </section>
+    </article>
+
+    <!-- Rechte Seite, Formular -->
+    <article>
+      <h2>Besuchstermin vereinbaren</h2>
+      <p></p>
+      <form action="/kontakt/">
+        <fieldset>
+          <legend>1. Wer kommt zu besuch?</legend>
+          <!-- 1. Zeile, nur eine Eingabe -->
+          <div>
+            <label for="visitorname">Vor- und Nachname</label>
+            <input type="text" id="visitorname" name="visitor" />
+          </div>
+          <!-- 2. Zeile, mit 2 Spalten -->
+          <div>
+            <!-- 1. Spalte -->
+            <div>
+              <label for="visitormail">E-Mail Adresse</label>
+              <input type="email" id="visitormail" name="email" />
+            </div>
+            <!-- 2. Spalte -->
+            <div>
+              <label for="visitorphone">Telefonnummer</label>
+              <input type="tel" id="visitorphone" name="phone" />
+            </div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. Welches Tier möchtest du sehen?</legend>
+          <div>
+            <label for="animal">Dein Tier</label>
+            <select name="animalToVisit" id="animal" required>
+              <option value="">Biete wähle dein Tier aus!</option>
+              <optgroup label="Katzen">
+                <option value="314">Momo</option>
+                <option value="159">Felix</option>
+              </optgroup>
+              <optgroup label="Hunde">
+                <option value="265">Bello</option>
+                <option value="353">Herbert</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend></legend>
+        </fieldset>
+      </form>
+    </article>
+  </main>
+
+  <footer>
+    <!-- 4 Column Grid -->
+    <div>
+      <div>
+        <span>Tierheim</span>
+        <p>Ein sicherer Hafen für Tiere in Not. Wir vermitteln Hoffnung, Liebe und ein neues Zuhause.</p>
+      </div>
+
+      <div>
+        <span>Über uns</span>
+        <ul>
+          <li><a>Unser Team</a></li>
+          <li><a>Jobs & Karriere</a></li>
+          <li><a>Presse</a></li>
+          <li><a>Transparenz</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <span>Kontakt</span>
+        <address>
+          <div>
+            Musterstraße 123
+            <br/>
+            12345 Tierstadt
+          </div>
+
+          <a>0123 456789</a>
+
+          <a>kontakt@tierheim.de</a>
+        </address>
+      </div>
+
+      <div>
+        <span>Öffnungszeiten</span>
+        <div>
+          <div><span>Mo - Fr</span><span>10:00 - 17:00</span></div>
+          <hr>
+          <div><span>Sa</span><span>10:00 - 14:00</span></div>
+          <hr>
+          <div><span>So & Feiertags</span><span>Geschlossen</span></div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div>
+        <span>© Tierheim Musterstadt e.V. Alle Rechte vorbehalten.</span>
+        <ul>
+          <li><a>Impressum</a></li>
+          <li><a>Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
