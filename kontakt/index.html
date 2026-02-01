@@ -35,17 +35,26 @@
   <main>
     <!-- Linke Seite -->
     <article>
-      <span></span>
-      <h1></h1>
-      <p></p>
+      <span>Besuch vereinbaren</span>
+      <h1>Lernen Sie Ihren neuen Freund kennen.</h1>
+      <p>Ein persönliches Treffen ist der erste Schritt zu einer lebenslangen Freundschaft. Wir nehmen uns Zeit für Sie und Ihre Fragen.</p>
       <ol>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          Tier auswählen
+          <p>Wählen Sie Ihren Favoriten aus unserer Liste der aktuell verfügbaren Tiere aus.</p>
+        </li>
+        <li>
+          Termin buchen
+          <p>Suchen Sie sich einen freuen Slot in unserem Kalender aus, der für Sie passt.</p>
+        </li>
+        <li>
+          Vorbeikommen
+          <p>Wir treffen uns vor Ort für ein erstes Kennenlernen unter fachkundiger Begleitung.</p>
+        </li>
       </ol>
       <section>
-        <h2></h2>
-        <p></p>
+        <h2>Wichtiger Hinweis</h2>
+        <p>Bitte bringen Sie zu Ihrem Termin ein gültiges Ausweisdokument mit. Bei Hunden empfehlen wir, etwa 60 Minuten für einen ersten gemeinsamen Spaziergang einzuplanen.</p>
       </section>
     </article>
 
@@ -59,19 +68,19 @@
           <!-- 1. Zeile, nur eine Eingabe -->
           <div>
             <label for="visitorname">Vor- und Nachname</label>
-            <input type="text" id="visitorname" name="visitor" />
+            <input required type="text" id="visitorname" name="visitor" />
           </div>
           <!-- 2. Zeile, mit 2 Spalten -->
           <div>
             <!-- 1. Spalte -->
             <div>
               <label for="visitormail">E-Mail Adresse</label>
-              <input type="email" id="visitormail" name="email" />
+              <input required type="email" id="visitormail" name="email" />
             </div>
             <!-- 2. Spalte -->
             <div>
               <label for="visitorphone">Telefonnummer</label>
-              <input type="tel" id="visitorphone" name="phone" />
+              <input required type="tel" id="visitorphone" name="phone" />
             </div>
           </div>
         </fieldset>
@@ -92,9 +101,44 @@
             </select>
           </div>
         </fieldset>
+
         <fieldset>
-          <legend></legend>
+          <legend>3. Wann hast du Zeit?</legend>
+          <div>
+            <label for="visit-day">An welchem Tag kommst du vorbei?</label>
+            <input required type="date" id="visit-day" name="day" min="2026-02-01" max="2026-02-14"/>
+          </div>
+          <div>
+            <div>Wähle einen Zeitslot der dir passt.</div>
+            <div>
+              <label for="timeslot-1000">10:00</label>
+              <input required type="radio" name="time" id="timeslot-1000" value="10:00" />
+            </div>
+            <div>
+              <label for="timeslot-1130">11:30</label>
+              <input required type="radio" name="time" id="timeslot-1130" value="11:30" />
+            </div>
+            <div>
+              <label for="timeslot-1300">13:00</label>
+              <input required type="radio" name="time" id="timeslot-1300" value="13:00" />
+            </div>
+            <div>
+              <label for="timeslot-1430">14:30</label>
+              <input required disabled type="radio" name="time" id="timeslot-1430" value="14:30" />
+            </div>
+            <div>
+              <label for="timeslot-1600">16:00</label>
+              <input required type="radio" name="time" id="timeslot-1600" value="16:00" />
+            </div>
+          </div>
         </fieldset>
+
+        <div>
+          <label for="tos-check">Ich stimme den Datenschutzbestimmungen zu und erkläre mich damit einverstanden, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden.</label>
+          <input type="checkbox" id="tos-check" required value="accept-tos" />
+        </div>
+
+        <button type="submit">Besichtigungsanfrage absenden</button>
       </form>
     </article>
   </main>
