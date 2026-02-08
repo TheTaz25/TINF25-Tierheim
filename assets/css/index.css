@@ -1,3 +1,49 @@
 body {
-  background-color: blanchedalmond;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+p, span, div, button, input, select, label {
+  font-size: 1.25rem;
+}
+
+.bg-beige {
+  background-color: rgb(249, 247, 242);
+}
+
+.bg-green {
+  background-color: rgb(234, 245, 234);
+}
+
+.topline-green-light {
+  font-size: 1rem;
+  color: rgb(109, 232, 110);
+}
+
+.topline-green-dark {
+  font-size: 1rem;
+  color: rgb(19, 101, 57);
+}
+
+article {
+  padding-block: 3.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+}
+
+img {
+  border-radius: 2rem;
+}
+
+.center-stage {
+  /* Zentriert Inhalt Mittig (margin links und rechts gleich) */
+  margin-inline: auto;
+  /* Maximale Breite des Containers */
+  max-width: 1200px;
+
+  /* "Fallback" für größen kleiner 1200px
+  sodass auf mobilen Geräten ein minimaler Abstand eingehalten wird */
+  padding-inline: 2rem;
 }
