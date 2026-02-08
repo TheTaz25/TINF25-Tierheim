@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tierheim - Ein neues Zuhause finden</title>
+
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/backgrounds.css">
+  <link rel="stylesheet" href="/assets/css/font.css">
+  <link rel="stylesheet" href="/assets/css/page.css">
+  <link rel="stylesheet" href="/assets/css/image.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
 </head>
+
 <body>
   <header>
     <div>
       <a href="/">Tierheim TINF25B6</a>
     </div>
     <nav>
-      <ul>
+      <ul class="menu-items">
         <li>
           <a>Unsere Tiere</a>
         </li>
@@ -33,109 +42,122 @@
 
 
   <main>
-    <article>
-      <div>
+    <article class="bg-green">
+      <div class="center-stage">
         <span>Unsere Mission</span>
         <h1>Über uns: Gemeinsam für Tiere</h1>
-        <p>Seit über 25 Jahren setzen wir uns für das Wohl von Tieren in unserer Region ein. Wir sind mehr als nur ein Tierheim - wir sind ein Versprechen für eine bessere Zukunft.</p>
+        <p>Seit über 25 Jahren setzen wir uns für das Wohl von Tieren in unserer Region ein. Wir sind mehr als nur ein
+          Tierheim - wir sind ein Versprechen für eine bessere Zukunft.</p>
       </div>
       <div></div>
     </article>
 
     <article>
-      <h2>Was uns antreibt</h2>
-      <p>Unsere Mission ist es, jedem Tier ein würdevolles Leben zu ermöglichen. Wir bieten Schutz, medizinische Versorung und vor allem Liebe, bis wir für jeden Schützling das perfekte neue Zuhause gefunden haben.</p>
-      <ul>
-        <li>
-          <span>Pflege</span>
-          <p>Beste medizinische Versorung und Zuwendung</p>
-        </li>
-        <li>
-          <span>Vermittlung</span>
-          <p>Verantwortungsvolle Auswahl neuer Halter</p>
-        </li>
-        <li>
-          <span>Aufklärung</span>
-          <p>Sensibilisierung für den Tierschutz</p>
-        </li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>Unsere Geschichte</h2>
-      <ul>
-        <li>
-          <span>1998</span>
-          <hr>
-          <p>
-            <span>Die Gründung</span>
-            <br>
-            Begonnen mit nur drei kleinen Gehegen in einer Garage, gründeten engagierte Tierfreunde den Verein.
-          </p>
-        </li>
-        <li>
-          <span>2010</span>
-          <hr>
-          <p>
-            <span>Neubau des Haupthauses</span>
-            <br>
-            Dank großzügiger Spenden konnten wir unser modernes Hauptgebäude mit integrierter Praxis für Notfälle eröffnen.
-          </p>
-        </li>
-        <li>
-          <span>Heute</span>
-          <hr>
-          <p>
-            <span>Ein Kompetenzzentrum</span>
-            <br>
-            Heute beherbergen wir über 150 Tiere gleichzeitig und vermitteln jährlich mehr als 500 Schützlinge in ein neues Zuhause.
-          </p>
-        </li>
-      </ul>
-    </article>
-
-    <article>
-      <h2>Das Team inter den Pfoten</h2>
-      <p>Experten mit Herz, die sich täglich für unsere Bewohner einsetzen.</p>
-      <!-- 3-Columns -->
-      <div>
-        <div>
-          <!-- image -->
-          <span>Dr. Elena Schmidt</span>
-          <span>Leitende Tierärztin</span>
-        </div>
-        <div>
-          <!-- image -->
-          <span>Thomas Weber</span>
-          <span>Heimleitung</span>
-        </div>
-        <div>
-          <!-- image -->
-          <span>Sarah Klein</span>
-          <span>Tierpflegerin für Hunde</span>
-        </div>
-      </div>
-    </article>
-
-    <article>
-      <div>
-        <h2>Ihre Hilfe zählt</h2>
-        <p>Wir legen großen wert auf Transparenz. Jeder Cent Ihrer Spende wird direkt für das Wohl unserer Tiere verwendet. Hier sehen Sie, wie wir die Mittel verteilen.</p>
+      <div class="center-stage center-horizontal">
+        <h2>Was uns antreibt</h2>
+        <p class="text-center">Unsere Mission ist es, jedem Tier ein würdevolles Leben zu ermöglichen. Wir bieten Schutz, medizinische
+          Versorung und vor allem Liebe, bis wir für jeden Schützling das perfekte neue Zuhause gefunden haben.</p>
         <ul>
-          <li><span></span><span>60%</span><span>Medizin & Futter</span></li>
-          <li><span></span><span>25%</span><span>Instandhaltung & Wärme</span></li>
-          <li><span></span><span>15%</span><span>Verwaltung & Notrufe</span></li>
+          <li>
+            <span>Pflege</span>
+            <p>Beste medizinische Versorung und Zuwendung</p>
+          </li>
+          <li>
+            <span>Vermittlung</span>
+            <p>Verantwortungsvolle Auswahl neuer Halter</p>
+          </li>
+          <li>
+            <span>Aufklärung</span>
+            <p>Sensibilisierung für den Tierschutz</p>
+          </li>
         </ul>
       </div>
-      <section>
-        
-        <h3>
-          <span>100%</span><br>
-          Einsatz für das Tier
-        </h3>
-        <p>Geprüftes Spendensiegel 2025</p>
-        <a>Jetzt Unterstützen</a>
-      </section>
+    </article>
+
+    <article class="bg-blue">
+      <div class="center-horizontal center-stage">
+        <h2>Unsere Geschichte</h2>
+        <ul>
+          <li>
+            <span>1998</span>
+            <hr>
+            <p>
+              <span>Die Gründung</span>
+              <br>
+              Begonnen mit nur drei kleinen Gehegen in einer Garage, gründeten engagierte Tierfreunde den Verein.
+            </p>
+          </li>
+          <li>
+            <span>2010</span>
+            <hr>
+            <p>
+              <span>Neubau des Haupthauses</span>
+              <br>
+              Dank großzügiger Spenden konnten wir unser modernes Hauptgebäude mit integrierter Praxis für Notfälle
+              eröffnen.
+            </p>
+          </li>
+          <li>
+            <span>Heute</span>
+            <hr>
+            <p>
+              <span>Ein Kompetenzzentrum</span>
+              <br>
+              Heute beherbergen wir über 150 Tiere gleichzeitig und vermitteln jährlich mehr als 500 Schützlinge in ein
+              neues Zuhause.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </article>
+
+    <article>
+      <div class="center-horizontal center-stage">
+        <h2>Das Team hinter den Pfoten</h2>
+        <p class="text-center">Experten mit Herz, die sich täglich für unsere Bewohner einsetzen.</p>
+        <!-- 3-Columns -->
+        <div>
+          <div>
+            <!-- image -->
+            <span>Dr. Elena Schmidt</span>
+            <span>Leitende Tierärztin</span>
+          </div>
+          <div>
+            <!-- image -->
+            <span>Thomas Weber</span>
+            <span>Heimleitung</span>
+          </div>
+          <div>
+            <!-- image -->
+            <span>Sarah Klein</span>
+            <span>Tierpflegerin für Hunde</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="bg-green">
+      <div class="center-stage">
+        <div>
+          <h2>Ihre Hilfe zählt</h2>
+          <p>Wir legen großen wert auf Transparenz. Jeder Cent Ihrer Spende wird direkt für das Wohl unserer Tiere
+            verwendet. Hier sehen Sie, wie wir die Mittel verteilen.</p>
+          <ul>
+            <li><span></span><span>60%</span><span>Medizin & Futter</span></li>
+            <li><span></span><span>25%</span><span>Instandhaltung & Wärme</span></li>
+            <li><span></span><span>15%</span><span>Verwaltung & Notrufe</span></li>
+          </ul>
+        </div>
+        <section>
+
+          <h3>
+            <span>100%</span><br>
+            Einsatz für das Tier
+          </h3>
+          <p>Geprüftes Spendensiegel 2025</p>
+          <a>Jetzt Unterstützen</a>
+        </section>
+      </div>
     </article>
   </main>
 
@@ -162,7 +184,7 @@
         <address>
           <div>
             Musterstraße 123
-            <br/>
+            <br />
             12345 Tierstadt
           </div>
 
@@ -195,4 +217,5 @@
     </div>
   </footer>
 </body>
+
 </html>

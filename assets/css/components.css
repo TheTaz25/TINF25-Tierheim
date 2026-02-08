@@ -1,0 +1,17 @@
+.card {
+  padding: 1.5rem;
+}
+
+.corner-rounded {
+  border-radius: 2rem;
+}
+
+.center-horizontal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pad-2 {
+  padding: 2rem;
+}

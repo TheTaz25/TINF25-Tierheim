@@ -1,0 +1,44 @@
+article {
+  padding-block: 3.5rem;
+}
+
+/* 
+Wir restriktieren die maximale Breite des Containers auf 1200px.
+Durch `margin-inline: auto` sorgt der Browser dafür,
+dass links als auch rechts der exakt gleiche Abstand eingestellt wird.
+Dadurch erhalten wir ein horizontal perfekt zentriertes Element mit dem
+wir arbeiten können.
+
+Das padding-inline dient dazu, dass mobile Geräte einen mindest-abstand
+auf der horizontalen achse erhalten.
+*/
+.center-stage {
+  /* Zentriert Inhalt Mittig (margin links und rechts gleich) */
+  margin-inline: auto;
+  /* Maximale Breite des Containers */
+  max-width: 1200px;
+
+  /* "Fallback" für größen kleiner 1200px
+  sodass auf mobilen Geräten ein minimaler Abstand eingehalten wird */
+  padding-inline: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  padding-inline: 2rem;
+}
+
+.menu-items {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+footer {
+  background-color: rgb(2, 7, 22);
+  color: rgb(253, 247, 233);
+}

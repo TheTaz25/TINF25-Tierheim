@@ -1,0 +1,52 @@
+/* BASE */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p, span, div, button, input, select, label, li, legend, a {
+  font-size: 1.25rem;
+}
+
+/* GENERIC */
+h1, .h1 {
+  font-size: 3rem;
+}
+h2, .h2 {
+  font-size: 2.5rem;
+}
+h3, .h3 {
+  font-size: 2rem;
+}
+h4, .h4 {
+  font-size: 1.75rem;
+}
+h5, .h5 {
+  font-size: 1.5rem;
+}
+h6, .h6 {
+  font-size: 1.5rem;
+}
+
+.quote {
+  font-style: italic;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* SPECIALZED STYLES */
+.topline-green-light {
+  font-size: 1rem;
+  color: rgb(109, 232, 110);
+}
+
+.topline-green-dark {
+  font-size: 1rem;
+  color: rgb(19, 101, 57);
+}
+
