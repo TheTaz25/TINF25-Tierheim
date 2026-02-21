@@ -10,6 +10,7 @@ p, span, div, button, input, select, label, li, legend, a {
 /* GENERIC */
 h1, .h1 {
   font-size: 3rem;
+  letter-spacing: -0.1rem;
 }
 h2, .h2 {
   font-size: 2.5rem;
@@ -37,6 +38,14 @@ h6, .h6 {
 
 .bold {
   font-weight: bold;
+}
+
+.headline-space-large {
+  margin-block: 2rem;
+}
+
+.soft {
+  color: rgb(100 100 100);
 }
 
 /* SPECIALZED STYLES */

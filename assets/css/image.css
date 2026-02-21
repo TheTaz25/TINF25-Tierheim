@@ -1,4 +1,21 @@
 img {
   border-radius: 2rem;
   width: 100%;
+
+  &.preview {
+    max-height: 200px;
+  }
+
+  &.cover {
+    object-fit: cover;
+
+    &.top {
+      object-position: top;
+    }
+  }
+}
+
+
+.rotated {
+  transform: rotate(3deg);
 }
