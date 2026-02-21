@@ -19,3 +19,38 @@
 .pad-2 {
   padding: 2rem;
 }
+
+
+.testimonial {
+  border-radius: 3rem;
+  background: white;
+  padding: 2rem;
+  position: relative;
+  margin-block-start: 2.5rem;
+  padding-block-start: 4rem;
+  box-shadow: 2px 2px 2px rgb(100 100 100 / 0.1);
+
+  img {
+    aspect-ratio: 1;
+    object-fit: cover;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 4px;
+  }
+  .headline {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-block-end: 1rem;
+  }
+  .quote {
+    text-align: center;
+    color: rgb(100 100 100);
+    font-size: 1rem;
+  }
+}
