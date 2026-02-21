@@ -1,0 +1,36 @@
+.two-column {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.three-column {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.four-column {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+@media (width >= 750px) {
+  .two-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .three-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .four-column {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
