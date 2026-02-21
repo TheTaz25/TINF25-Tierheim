@@ -29,11 +29,12 @@ header {
   justify-content: space-between;
   gap: 3rem;
   padding-inline: 2rem;
+  padding-block: 1rem;
 }
 
 .menu-items {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
