@@ -5,3 +5,13 @@
 .bottom-4 {
   margin-block-end: 4rem;
 }
+
+.block-1 {
+  margin-block: 1rem;
+}
+.block-2 {
+  margin-block: 2rem;
+}
+.block-4 {
+  margin-block: 4rem;
+}

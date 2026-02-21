@@ -48,6 +48,10 @@ h6, .h6 {
   color: rgb(100 100 100);
 }
 
+.small {
+  font-size: 1rem;
+}
+
 /* SPECIALZED STYLES */
 .topline-green-light {
   font-size: 1rem;

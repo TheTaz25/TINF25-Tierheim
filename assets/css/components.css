@@ -1,5 +1,9 @@
 .card {
   padding: 1.5rem;
+
+  &.rounded {
+    border-radius: 3rem;
+  }
 }
 
 .corner-rounded {
