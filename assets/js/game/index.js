@@ -1,9 +1,9 @@
 const animalBuilder = () => {
   const stats = {
     health: 100,
-    energy: 100,
+    energy: 85,
     hunger: 50,
-    trust: 0,
+    trust: 20,
   };
 
   const inventory = [];

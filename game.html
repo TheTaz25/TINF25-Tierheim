@@ -3,17 +3,329 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Allein</title>
   <script src="/assets/js/game/index.js" type="module">
 
   </script>
+  <link rel="stylesheet" href="./assets/css/game.css">
 </head>
 <body>
-  <button onclick="dog.setHealth(-10)">
-    Decrease health
-  </button>
-  <button onclick="dog.setHealth(5)">
-    Increase health
-  </button>
+  <main>
+    <div class="top">
+      <h1>Allein</h1>
+      <aside>
+        <section>
+          <h2>Hund</h2>
+          <div id="health">
+            Du fühlst dich gut.
+          </div>
+          <div id="energy">
+            Du bist ausgeruht.
+          </div>
+          <div id="hunger">
+            Du bist hungrig.
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <!-- Screen 1 -->
+    <article id="screen-1" class="screen">
+      <h2>Kalter Morgen - Seitenstraße</h2>
+      <p>
+        Du wachst hinter einem Müllcontainer auf. Die Luft ist kalt. Dein Magen knurrt.
+        <br>
+        <br>
+        Du bist allein.
+      </p>
+      <div class="actions">
+        <button type="button" id="s1-a1">
+          Durchsuche den Müll
+        </button>
+        <button type="button" id="s1-a2">
+          Strecke dich und begebe dich zur Straße
+        </button>
+        <button type="button" id="s1-a3">
+          Bleib und ruh dich etwas mehr aus
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 2 -->
+    <article id="screen-2" class="screen hidden">
+      <h2>Hinter der Bäckerei - Straße</h2>
+      <p>
+        Der Geruch von frisch gebackenem Brot kommt aus einer halb geöffneten Hintertür.
+      </p>
+      <div class="actions">
+        <button type="button" id="s2-a1">
+          Schleiche dich hinein
+        </button>
+        <button type="button" id="s2-a2">
+          Warte geduldig auf Reste
+        </button>
+        <button type="button" id="s2-a2">
+          Belle
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 3 -->
+    <article id="screen-3" class="screen hidden">
+      <h2>Der Park</h2>
+      <p>
+        Kinder spielen. Ein anderer Streuner beobachtet dich.
+      </p>
+      <div class="actions">
+        <button type="button" id="s3-a1">
+          Gehe auf die Kinder zu
+        </button>
+        <button type="button" id="s3-a2">
+          Nähere dich dem Streuner
+        </button>
+        <button type="button" id="s3-a3">
+          Ruh dich unter einem Baum aus
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 4 -->
+    <article id="screen-4" class="screen hidden">
+      <h2>Marktstraße</h2>
+      <p>Menschen laufen umher und tragen Essen mit sich.</p>
+      <div class="actions">
+        <button type="button" id="s4-a1">
+          Versuche ein Sandwich zu klauen
+        </button>
+        <button type="button" id="s4-a2">
+          Setze dich hin, sei nett und wackel mit dem Schwanz
+        </button>
+        <button type="button" id="s4-a3">
+          Gehe zum Wald
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 5 -->
+    <article id="screen-5" class="screen hidden">
+      <h2>Eine kleine Wunde</h2>
+      <p>
+        Du spürst einen Stich in deiner Pfote.
+        <br><br>
+        Ein kleiner Schnitt
+      </p>
+      <div class="actions">
+        <button type="button" id="s5-a1">
+          Lecke die Wunde ab
+        </button>
+        <button type="button" id="s5-a2">
+          Ignoriere die Wunde
+        </button>
+        <button type="button" id="s5-a3">
+          Verwende eine Bandage
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 6 -->
+    <article id="screen-6" class="screen hidden">
+      <h2>Das Kind</h2>
+      <p>
+        Ein kleines Kind kniet sich vor dir hin.
+        <br><br>
+        Es streckt langsam seine Hand aus.
+      </p>
+      <div class="actions">
+        <button type="button" id="s6-a1">
+          Lass dich streicheln
+        </button>
+        <button type="button" id="s6-a2">
+          Gehe vorsichtig zurück
+        </button>
+        <button type="button" id="s6-a3">
+          Knurre
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 7 -->
+    <article id="screen-7" class="screen hidden">
+      <h2>Abend-Dämmerung</h2>
+      <p>
+        Der Himmel verdunkelt sich.
+        <br><br>
+        Du musst dich entscheiden wo du schlafen willst.
+      </p>
+      <div class="actions">
+        <button type="button" id="s7-a1">
+          Kehre zur Seitenstraße zurück
+        </button>
+        <button type="button" id="s7-a2">
+          Schlafe im Park
+        </button>
+        <button type="button" id="s7-a3">
+          Folge dem Kind nach Hause
+        </button>
+      </div>
+    </article>
+  
+    <!-- Screen 8 -->
+    <article id="screen-8" class="screen hidden">
+      <h2>Nächtliches Ereignis</h2>
+      <p>
+        <span id="option-1">
+          Es fängt an massiv zu regnen.
+        </span>
+        <span id="option-2">
+          Du findest eine warme Decke.
+        </span>
+        <span id="option-3">
+          Du träumst davon frei umher zu rennen.
+        </span>
+      </p>
+      <div class="actions">
+        <button type="button" id="s8-a1">
+          Wache auf
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 9 -->
+    <article id="screen-9" class="screen hidden">
+      <h2>Der Hundefänger</h2>
+      <p>Die Tür eines Transporter öffnet sich...</p>
+      <div class="actions">
+        <button type="button" id="s9-a1">
+          LAUF!
+        </button>
+        <button type="button" id="s9-a2">
+          Verstecke dich hinter Kisten
+        </button>
+        <button type="button" id="s9-a3">
+          Bleib still stehen
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 10 -->
+    <article id="screen-10" class="screen hidden">
+      <h2>Der Waldrand</h2>
+      <p>Die Stadt hinter dir wird immer kleiner.</p>
+      <div class="actions">
+        <button type="button" id="s10-a1">
+          Jage nach Futter
+        </button>
+        <button type="button" id="s10-a2">
+          Erforsche den Wald
+        </button>
+        <button type="button" id="s10-a3">
+          Kehre zur Stadt zurück
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 11 -->
+    <article id="screen-11" class="screen hidden">
+      <h2>Eine wilde Begegnung</h2>
+      <p>Du hörst etwas in den Büschen</p>
+      <div class="actions">
+        <button type="button" id="s11-a1">
+          Untersuche die Quelle
+        </button>
+        <button type="button" id="s11-a2">
+          Lauf weg
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 12 -->
+    <article id="screen-12" class="screen hidden">
+      <h2>Das Tierheim</h2>
+      <p>
+        Du befindest dich innerhalb eines Käfigs.
+        <br><br>
+        Es riecht sauber.
+      </p>
+      <div class="actions">
+        <button type="button" id="s12-a1">
+          Sei ruhig und freundlich
+        </button>
+        <button type="button" id="s12-a2">
+          Belle durchgehend
+        </button>
+        <button type="button" id="s12-a3">
+          Warte ruhig
+        </button>
+      </div>
+    </article>
+
+    <!-- Screen 13 -->
+    <article id="screen-13" class="screen hidden">
+      <h2>Die Legende</h2>
+      <p>
+        Die anderen Hunde folgen dir.
+        <br><br>
+        Du wirst respektiert.
+      </p>
+    </article>
+
+    <!-- Screen 14 -->
+    <article id="screen-14" class="screen hidden">
+      <h2>Adoption</h2>
+      <p>
+        Ein warmes zuhause.
+        <br><br>
+        Auf einer Schüssel steht dein Name.
+      </p>
+    </article>
+
+    <!-- Screen 15 -->
+    <article id="screen-15" class="screen hidden">
+      <h2>Das Ende</h2>
+      <p>
+        Du kannst dich nicht mehr auf den Beinen halten und fällst um.
+        <br><br>
+        Die Welt um dich herum wird dunkler.
+      </p>
+      <div class="actions">
+        <button type="button" id="s15-a1">
+          Starte einen neuen Tag?
+        </button>
+      </div>
+    </article>
+  </main>
+
+  <footer id="debug" class="hidden">
+    <div>
+      <label for="debug-screen">
+        Event
+      </label>
+      <input type="number" name="screen" id="debug-screen" value="1" />
+    </div>
+    <div>
+      <label for="debug-health">
+        Leben
+      </label>
+      <input type="number" name="health" id="debug-health" value="100" />
+    </div>
+    <div>
+      <label for="debug-energy">
+        Energie
+      </label>
+      <input type="number" name="energy" id="debug-energy" value="85" />
+    </div>
+    <div>
+      <label for="debug-hunger">
+        Hunger
+      </label>
+      <input type="number" name="hunger" id="debug-hunger" value="50" />
+    </div>
+    <div>
+      <label for="debug-trust">
+        Vertrauen
+      </label>
+      <input type="number" name="trust" id="debug-trust" value="20" />
+    </div>
+  </footer>
 </body>
 </html>
