@@ -1,0 +1,17 @@
+{
+  "health": {
+    "high": "Leben hoch",
+    "medium": "Leben mittel",
+    "low": "Leben niedrig"
+  },
+  "energy": {
+    "high": "Energie hoch",
+    "medium": "Energie mittel",
+    "low": "Energie niedrig"
+  },
+  "hunger": {
+    "high": "Hunger hoch",
+    "medium": "Hunger mittel",
+    "low": "Hunger niedrig"
+  }
+}
