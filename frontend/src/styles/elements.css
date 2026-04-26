@@ -21,4 +21,8 @@ a {
     display: inline-block;
     text-align: center;
   }
+
+  &:hover:not(.btn, .no-underline) {
+    text-decoration: underline;
+  }
 }

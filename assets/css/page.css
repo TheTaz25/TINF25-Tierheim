@@ -23,22 +23,6 @@ auf der horizontalen achse erhalten.
   padding-inline: 2rem;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding-inline: 2rem;
-  padding-block: 1rem;
-}
-
-.menu-items {
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
 footer {
   background-color: rgb(2, 7, 22);
   padding-block: 2rem;
