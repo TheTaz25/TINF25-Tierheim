@@ -1,3 +1,5 @@
+import { removeClass, addClass, setInnerText, setValue } from './dom.js';
+
 function rollTheDice (threshold) {
   return Math.random() <= threshold;
 }
@@ -15,18 +17,13 @@ const animalBuilder = () => {
 
   // 'health' || 'energy' || 'hunger' || 'trust'
   const updateUi = (statName) => {
-    const debugInput = document.getElementById(`debug-${statName}`);
-    if (debugInput) {
-      debugInput.value = stats[statName];
-    }
+    setValue(`#debug-${statName}`, stats[statName]);
 
-    const label = document.getElementById(statName);
-    if (label) {
-      const key = stats[statName] > 65
-        ? 'high' : stats[statName] > 32
-          ? 'medium' : 'low';
-      label.innerText = translation[statName][key];
-    }
+    const key = stats[statName] > 65
+      ? 'high' : stats[statName] > 32
+        ? 'medium' : 'low';
+
+    setInnerText(`#${statName}`, translation?.[statName]?.[key]);
   };
 
   function setHealth (value, asDelta) {
@@ -38,10 +35,6 @@ const animalBuilder = () => {
     updateUi('health');
   }
 
-  function getHealth () {
-    return stats.health;
-  }
-
   function setEnergy (value, asDelta) {
     if (asDelta) {
       stats.energy = stats.energy + value;
@@ -49,10 +42,6 @@ const animalBuilder = () => {
       stats.energy = value
     }
     updateUi('energy');
-  }
-
-  function getEnergy () {
-    return stats.energy;
   }
 
   function setHunger (value, asDelta) {
@@ -64,10 +53,6 @@ const animalBuilder = () => {
     updateUi('hunger');
   }
 
-  function getHunger () {
-    return stats.hunger;
-  }
-
   function setTrust (value, asDelta) {
     if (asDelta) {
       stats.trust = stats.trust + value;
@@ -75,10 +60,6 @@ const animalBuilder = () => {
       stats.trust = value
     }
     updateUi('trust');
-  }
-
-  function getTrust () {
-    return stats.trust;
   }
 
   function handleGameInput(actionId) {
@@ -106,14 +87,10 @@ const animalBuilder = () => {
   loadTranslations();
 
   return {
-    getHealth,
     setHealth,
     setEnergy,
-    getEnergy,
     setHunger,
-    getHunger,
     setTrust,
-    getTrust,
     handleGameInput,
   };
 };
@@ -138,19 +115,11 @@ enableButtons();
 // SCREEN
 
 function hideCurrentScreen () {
-  const currentScreen = document.querySelector('.screen:not(.hidden)');
-
-  if (currentScreen) {
-    currentScreen.classList.add('hidden');
-  }
+  addClass('.screen:not(.hidden)', 'hidden');
 }
 
 function showScreen (screenNumber) {
-  const nextScreen = document.getElementById(`screen-${screenNumber}`);
-
-  if (nextScreen) {
-    nextScreen.classList.remove('hidden');
-  }
+  removeClass(`#screen-${screenNumber}`, 'hidden');
 }
 
 function nextScreen (screenNumber) {
