@@ -14,9 +14,9 @@ img {
       object-position: top;
     }
   }
+
+  &.rotated {
+    transform: rotate(3deg);
+  }
 }
 
-
-.rotated {
-  transform: rotate(3deg);
-}

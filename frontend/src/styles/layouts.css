@@ -1,8 +1,31 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(var(--columns, 1), 1fr);
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (width >= 750px) {
+  .grid {
+    grid-template-columns: repeat(var(--columns, 1), 1fr);
+  }
 }
 
 .gap {
   gap: var(--gap, 1rem);
+}
+
+article {
+  padding-block: 3.5rem;
+}
+
+.center-stage {
+  margin-inline: auto;
+
+  max-width: 1200px;
+
+  padding-inline: 2rem;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
 }
