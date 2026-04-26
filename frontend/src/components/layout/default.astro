@@ -1,5 +1,6 @@
 ---
 import PageHeader from '../PageHeader.astro';
+import PageFooter from '../PageFooter.astro';
 import '../../styles/index.css';
 
 interface Props {
@@ -20,6 +21,6 @@ const { pageTitle } = Astro.props;
 <body>
   <PageHeader />
   <slot />
-  <!-- <PageFooter /> -->
+  <PageFooter />
 </body>
 </html>

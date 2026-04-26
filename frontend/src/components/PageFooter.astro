@@ -1,1 +1,64 @@
+---
+import './footer/styles.css';
+import Description from './footer/Description.astro';
+import MetaLinks from './footer/MetaLinks.astro';
+import ContactInformation from './footer/Contact.astro';
+import OpeningTimes from './footer/OpeningTimes.astro';
+---
 
+<footer>
+  <div class="wrapper">
+    <div class="grid gap" style={{ '--columns': 4, '--gap': '2rem' }}>
+      <Description />
+      <MetaLinks />
+      <ContactInformation />
+      <OpeningTimes />
+    </div>
+
+    <hr>
+
+    <div class="end">
+      <span>© Tierheim Musterstadt e.V. Alle Rechte vorbehalten.</span>
+      <ul>
+        <li><a>Impressum</a></li>
+        <li><a>Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    /* ToDo: CSS-Variables */
+    background-color: rgb(2 7 22);
+    padding: 2rem;
+
+    .wrapper {
+      /* ToDo: CSS-Variables */
+      color: rgb(253 247 233);
+      /* ToDo: CSS-Variables */
+      max-width: 1200px;
+
+      margin-inline: auto;
+
+      * { font-size: 1rem; }
+
+      .soft, a {
+        /* ToDo: CSS-Variables */
+        color: darkgray;
+      }
+    }
+
+    .end {
+      margin-block-start: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        display: flex;
+        gap: 2rem;
+      }
+    }
+  }
+</style>
