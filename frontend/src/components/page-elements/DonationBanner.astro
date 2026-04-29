@@ -1,0 +1,61 @@
+<article>
+  <div class="card center-stage">
+    <div class="grid gap section-card elevated-1" style="--columns: 2; --gap: 1rem;">
+      <section class="flex">
+        <h2 class="h3">Ihre Hilfe kommt an.</h2>
+        <p class="soft">
+          Futter, medizinische Versorgung und ein warmes Plätzchen - das alles kostet Geld. Mit Ihrer Spende ermöglichen Sie uns, Tieren in Not zu helfen. Jeder Euro zählt.
+        </p>
+        <div class="grid gap center" style="--gap: 1rem; --columns: 2;">
+          <a href="/" class="btn primary">Jetzt Spenden</a>
+          <a href="/" class="btn">Sachspenden Infos</a>
+        </div>
+      </section>
+      <div><img src="/assets/images/kitten.webp" alt="" /></div>
+    </div>
+  </div>
+</article>
+
+<style>
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .soft {
+    margin-block-end: 2rem;
+  }
+
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+  }
+
+  .section-card {
+    background-color: blanchedalmond;
+    padding: 2rem;
+    border-radius: 2rem;
+
+    img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      padding: 2rem;
+
+      box-sizing: border-box;
+      border-radius: 5rem;
+
+      transform: rotate(5deg);
+    }
+
+    section {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+</style>

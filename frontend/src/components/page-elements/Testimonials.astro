@@ -1,0 +1,76 @@
+<article class="bg-green">
+  <div class="center-stage center-horizontal">
+    <span class="topline bold">Testimonials</span>
+    <h2>Happy Ends: Erfolgsgeschichten</h2>
+    <p class="text-center soft small">Nichts macht uns glücklicher als ein perfektes Match. Hier sind einige unserer Lieblingsgeschichten.</p>
+    <div class="grid gap" style="--columns: 3; --gap: 1rem;">
+      <section class="testimonial">
+        <img src="/assets/images/rottweiler.webp" alt="">
+        <h3 class="headline">Luna & Familie Müller</h3>
+        <p class="quote">"Endlich angekommen! Danke für diesen tollen Hund. Sie hat unser Leben komplett bereichert."</p>
+      </section>
+      <section class="testimonial">
+        <img src="/assets/images/black-cat.webp" alt="">
+        <h3 class="headline">Simba im Glück</h3>
+        <p class="quote">"Simba fühlt sich Pudelwohl in seinem neuen Reich. Er ist der König im Haus!"</p>
+      </section>
+      <section class="testimonial">
+        <img src="/assets/images/bunny.webp" alt="">
+        <h3 class="headline">Hoppel & Freunde</h3>
+        <p class="quote">"Ein tolles neues Gehege und viel Platz für Hoppel. Er hat sofort Freunde gefunden."</p>
+      </section>
+    </div>
+  </div>
+</article>
+
+<style>
+  .center-horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .topline {
+    font-size: 1rem;
+    color: rgb(109, 232, 110);
+    margin-block-end: 1rem;
+  }
+
+  h2 {
+    margin-block-end: 2rem;
+  }
+
+  .testimonial {
+    border-radius: 3rem;
+    background: white;
+    padding: 2rem;
+    position: relative;
+    margin-block-start: 5rem;
+    padding-block-start: 4rem;
+    box-shadow: 2px 2px 2px rgb(100 100 100 / 0.1);
+
+    img {
+      aspect-ratio: 1;
+      object-fit: cover;
+      width: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 4px;
+    }
+    .headline {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-block-end: 1rem;
+    }
+    .quote {
+      text-align: center;
+      color: rgb(100 100 100);
+      font-size: 1rem;
+    }
+  }
+</style>
