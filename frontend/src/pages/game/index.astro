@@ -1,9 +1,11 @@
 ---
-import Default from "../../components/layout/default.astro";
+import Empty from "../../components/layout/empty.astro";
 import "../../styles/game.css";
+// import "../../assets/js/dom";
+// import "../../assets/js/game";
 ---
 
-<Default pageTitle="Allein - Ein streunendes Spiel">
+<Empty pageTitle="Allein - Ein streunendes Spiel">
   <main>
     <div class="top">
       <h1>Allein</h1>
@@ -307,7 +309,7 @@ import "../../styles/game.css";
         Energie
       </label>
       <input type="number" name="energy" id="debug-energy" value="85" />
-    </div>
+  </div>
     <div>
       <label for="debug-hunger">
         Hunger
@@ -321,4 +323,7 @@ import "../../styles/game.css";
       <input type="number" name="trust" id="debug-trust" value="20" />
     </div>
   </footer>
-</Default>
+
+  <script src="/dom.js" is:bundled type="module"></script>
+  <script src="/game.js" is:bundled type="module"></script>
+</Empty>
