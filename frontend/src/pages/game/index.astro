@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Allein</title>
-  <script src="/assets/js/game/index.js" type="module">
+---
+import Default from "../../components/layout/default.astro";
+import "../../styles/game.css";
+---
 
-  </script>
-  <link rel="stylesheet" href="./assets/css/game.css">
-</head>
-<body>
+<Default pageTitle="Allein - Ein streunendes Spiel">
   <main>
     <div class="top">
       <h1>Allein</h1>
@@ -327,5 +321,4 @@
       <input type="number" name="trust" id="debug-trust" value="20" />
     </div>
   </footer>
-</body>
-</html>
+</Default>

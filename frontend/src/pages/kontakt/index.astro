@@ -1,0 +1,212 @@
+---
+import Default from "../../components/layout/default.astro";
+---
+
+<Default pageTitle="Tierheim - Kontaktanfrage">
+<main class="bg-beige center-stage grid gap contact elevated-1" style="--columns: 2; --gap: 5rem;">
+    <!-- Linke Seite -->
+    <article class="left">
+      <span class="topline">Besuch vereinbaren</span>
+      <h1>Lernen Sie Ihren neuen Freund kennen.</h1>
+      <p class="soft">Ein persönliches Treffen ist der erste Schritt zu einer lebenslangen Freundschaft. Wir nehmen uns Zeit für Sie und Ihre Fragen.</p>
+      <ol>
+        <li>
+          <span class="bold">Tier auswählen</span>
+          <p class="soft">Wählen Sie Ihren Favoriten aus unserer Liste der aktuell verfügbaren Tiere aus.</p>
+        </li>
+        <li>
+          <span class="bold">Termin buchen</span>
+          <p class="soft">Suchen Sie sich einen freuen Slot in unserem Kalender aus, der für Sie passt.</p>
+        </li>
+        <li>
+          <span class="bold">Vorbeikommen</span>
+          <p class="soft">Wir treffen uns vor Ort für ein erstes Kennenlernen unter fachkundiger Begleitung.</p>
+        </li>
+      </ol>
+      <section class="info bg-blue">
+        <h2 class="h5">Wichtiger Hinweis</h2>
+        <p class="soft">Bitte bringen Sie zu Ihrem Termin ein gültiges Ausweisdokument mit. Bei Hunden empfehlen wir, etwa 60 Minuten für einen ersten gemeinsamen Spaziergang einzuplanen.</p>
+      </section>
+    </article>
+
+    <!-- Rechte Seite, Formular -->
+    <article>
+      <h2>Besuchstermin vereinbaren</h2>
+      <p></p>
+      <form action="/kontakt/">
+        <fieldset>
+          <legend>1. Wer kommt zu besuch?</legend>
+          <!-- 1. Zeile, nur eine Eingabe -->
+          <div class="field">
+            <label for="visitorname">Vor- und Nachname</label>
+            <input required type="text" id="visitorname" name="visitor" />
+          </div>
+          <div class="field">
+            <label for="visitormail">E-Mail Adresse</label>
+            <input required type="email" id="visitormail" name="email" />
+          </div>
+          <!-- 2. Spalte -->
+          <div class="field">
+            <label for="visitorphone">Telefonnummer</label>
+            <input required type="tel" id="visitorphone" name="phone" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>2. Welches Tier möchtest du sehen?</legend>
+          <div class="field">
+            <label for="animal">Dein Tier</label>
+            <select name="animalToVisit" id="animal" required>
+              <option value="">Biete wähle dein Tier aus!</option>
+              <optgroup label="Katzen">
+                <option value="314">Momo</option>
+                <option value="159">Felix</option>
+              </optgroup>
+              <optgroup label="Hunde">
+                <option value="265">Bello</option>
+                <option value="353">Herbert</option>
+              </optgroup>
+            </select>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Wann hast du Zeit?</legend>
+          <div class="field">
+            <label for="visit-day">An welchem Tag kommst du vorbei?</label>
+            <input required type="date" id="visit-day" name="day" min="2026-02-01" max="2026-02-14"/>
+          </div>
+          <div>Wähle einen Zeitslot der dir passt.</div>
+          <div class="time-slots">
+            <div class="slot">
+              <label for="timeslot-1000">10:00</label>
+              <input required type="radio" name="time" id="timeslot-1000" value="10:00" />
+            </div>
+            <div class="slot">
+              <label for="timeslot-1130">11:30</label>
+              <input required type="radio" name="time" id="timeslot-1130" value="11:30" />
+            </div>
+            <div class="slot">
+              <label for="timeslot-1300">13:00</label>
+              <input required type="radio" name="time" id="timeslot-1300" value="13:00" />
+            </div>
+            <div class="slot">
+              <label for="timeslot-1430">14:30</label>
+              <input required disabled type="radio" name="time" id="timeslot-1430" value="14:30" />
+            </div>
+            <div class="slot">
+              <label for="timeslot-1600">16:00</label>
+              <input required type="radio" name="time" id="timeslot-1600" value="16:00" />
+            </div>
+          </div>
+        </fieldset>
+
+        <div>
+          <input type="checkbox" id="tos-check" required value="accept-tos" />
+          <label for="tos-check">Ich stimme den Datenschutzbestimmungen zu und erkläre mich damit einverstanden, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden.</label>
+        </div>
+
+        <button type="submit">Besichtigungsanfrage absenden</button>
+      </form>
+    </article>
+  </main>
+</Default>
+
+<style>
+  .contact {
+    border-radius: 1rem;
+    margin-block-end: 5rem;
+  }
+
+  .topline {
+    color: oklch(from rgb(20 200 20) calc(l * 0.75) c h);
+    font-size: 1rem;
+  }
+
+  ol {
+    display: grid;
+    gap: 1.5rem;
+    margin-block: 2rem;
+  }
+
+  h1 {
+    margin-block-end: 1rem;
+  }
+
+  .info {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid lightgray;
+
+    p {
+      margin-block-start: 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  form {
+    display: grid;
+    gap: 1.5rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-block-start: 1rem;
+
+    fieldset {
+      border: none;
+
+      legend {
+        margin-block-end: 0.5rem;
+      }
+    }
+  }
+
+  .field {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    margin-block-end: 0.5rem;
+
+    label {
+      align-content: center;
+    }
+  }
+
+  .time-slots {
+    margin-block-start: 1rem;
+    display: flex;
+
+    .slot {
+      input {
+        appearance: none;
+      }
+
+      label {
+        background: white;
+        border: 2px solid green;
+        padding: 0.25rem 1rem;
+        border-radius: 2rem;
+      }
+
+      label:has(+ input:checked) {
+        background-color: green;
+        color: white;
+      }
+
+      label:has(+ input:disabled) {
+        border-color: gray;
+        background: #eee;
+      }
+    }
+  }
+
+  button {
+    background: green;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 1rem;
+    border: none;
+
+    &:hover {
+      background: oklch(from green calc(l * 1.25) calc(c * 0.825) h);
+    }
+  }
+</style>
