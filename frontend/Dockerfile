@@ -1,6 +1,6 @@
 FROM node:24-alpine AS base
 
-COPY . /app
+COPY ./frontend /app
 WORKDIR /app
 
 FROM base AS build
@@ -10,4 +10,4 @@ RUN npm run build
 FROM caddy:alpine
 
 COPY --from=build /app/dist/ /srv/
-COPY ./Caddyfile /etc/caddy/Caddyfile
+COPY ./frontend/Caddyfile /etc/caddy/Caddyfile
