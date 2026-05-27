@@ -3,29 +3,48 @@ import Default from "../../components/layout/default.astro";
 ---
 
 <Default pageTitle="Tierheim - Kontaktanfrage">
-<main class="bg-beige center-stage grid gap contact elevated-1" style="--columns: 2; --gap: 5rem;">
+  <main
+    class="bg-beige center-stage grid gap contact elevated-1"
+    style="--columns: 2; --gap: 5rem;"
+  >
     <!-- Linke Seite -->
     <article class="left">
       <span class="topline">Besuch vereinbaren</span>
       <h1>Lernen Sie Ihren neuen Freund kennen.</h1>
-      <p class="soft">Ein persönliches Treffen ist der erste Schritt zu einer lebenslangen Freundschaft. Wir nehmen uns Zeit für Sie und Ihre Fragen.</p>
+      <p class="soft">
+        Ein persönliches Treffen ist der erste Schritt zu einer lebenslangen
+        Freundschaft. Wir nehmen uns Zeit für Sie und Ihre Fragen.
+      </p>
       <ol>
         <li>
           <span class="bold">Tier auswählen</span>
-          <p class="soft">Wählen Sie Ihren Favoriten aus unserer Liste der aktuell verfügbaren Tiere aus.</p>
+          <p class="soft">
+            Wählen Sie Ihren Favoriten aus unserer Liste der aktuell verfügbaren
+            Tiere aus.
+          </p>
         </li>
         <li>
           <span class="bold">Termin buchen</span>
-          <p class="soft">Suchen Sie sich einen freuen Slot in unserem Kalender aus, der für Sie passt.</p>
+          <p class="soft">
+            Suchen Sie sich einen freuen Slot in unserem Kalender aus, der für
+            Sie passt.
+          </p>
         </li>
         <li>
           <span class="bold">Vorbeikommen</span>
-          <p class="soft">Wir treffen uns vor Ort für ein erstes Kennenlernen unter fachkundiger Begleitung.</p>
+          <p class="soft">
+            Wir treffen uns vor Ort für ein erstes Kennenlernen unter
+            fachkundiger Begleitung.
+          </p>
         </li>
       </ol>
       <section class="info bg-blue">
         <h2 class="h5">Wichtiger Hinweis</h2>
-        <p class="soft">Bitte bringen Sie zu Ihrem Termin ein gültiges Ausweisdokument mit. Bei Hunden empfehlen wir, etwa 60 Minuten für einen ersten gemeinsamen Spaziergang einzuplanen.</p>
+        <p class="soft">
+          Bitte bringen Sie zu Ihrem Termin ein gültiges Ausweisdokument mit.
+          Bei Hunden empfehlen wir, etwa 60 Minuten für einen ersten gemeinsamen
+          Spaziergang einzuplanen.
+        </p>
       </section>
     </article>
 
@@ -33,7 +52,12 @@ import Default from "../../components/layout/default.astro";
     <article>
       <h2>Besuchstermin vereinbaren</h2>
       <p></p>
-      <form action="/kontakt/">
+      <form
+        action="http://localhost:3000/api/contact/"
+        method="POST"
+        enctype="text/plain"
+        id="contact-form"
+      >
         <fieldset>
           <legend>1. Wer kommt zu besuch?</legend>
           <!-- 1. Zeile, nur eine Eingabe -->
@@ -73,36 +97,78 @@ import Default from "../../components/layout/default.astro";
           <legend>3. Wann hast du Zeit?</legend>
           <div class="field">
             <label for="visit-day">An welchem Tag kommst du vorbei?</label>
-            <input required type="date" id="visit-day" name="day" min="2026-02-01" max="2026-02-14"/>
+            <input
+              required
+              type="date"
+              id="visit-day"
+              name="day"
+              min="2026-02-01"
+              max="2026-02-14"
+            />
           </div>
           <div>Wähle einen Zeitslot der dir passt.</div>
           <div class="time-slots">
             <div class="slot">
               <label for="timeslot-1000">10:00</label>
-              <input required type="radio" name="time" id="timeslot-1000" value="10:00" />
+              <input
+                required
+                type="radio"
+                name="time"
+                id="timeslot-1000"
+                value="10:00"
+              />
             </div>
             <div class="slot">
               <label for="timeslot-1130">11:30</label>
-              <input required type="radio" name="time" id="timeslot-1130" value="11:30" />
+              <input
+                required
+                type="radio"
+                name="time"
+                id="timeslot-1130"
+                value="11:30"
+              />
             </div>
             <div class="slot">
               <label for="timeslot-1300">13:00</label>
-              <input required type="radio" name="time" id="timeslot-1300" value="13:00" />
+              <input
+                required
+                type="radio"
+                name="time"
+                id="timeslot-1300"
+                value="13:00"
+              />
             </div>
             <div class="slot">
               <label for="timeslot-1430">14:30</label>
-              <input required disabled type="radio" name="time" id="timeslot-1430" value="14:30" />
+              <input
+                required
+                disabled
+                type="radio"
+                name="time"
+                id="timeslot-1430"
+                value="14:30"
+              />
             </div>
             <div class="slot">
               <label for="timeslot-1600">16:00</label>
-              <input required type="radio" name="time" id="timeslot-1600" value="16:00" />
+              <input
+                required
+                type="radio"
+                name="time"
+                id="timeslot-1600"
+                value="16:00"
+              />
             </div>
           </div>
         </fieldset>
 
         <div>
           <input type="checkbox" id="tos-check" required value="accept-tos" />
-          <label for="tos-check">Ich stimme den Datenschutzbestimmungen zu und erkläre mich damit einverstanden, dass meine Daten zur Bearbeitung der Anfrage gespeichert werden.</label>
+          <label for="tos-check"
+            >Ich stimme den Datenschutzbestimmungen zu und erkläre mich damit
+            einverstanden, dass meine Daten zur Bearbeitung der Anfrage
+            gespeichert werden.</label
+          >
         </div>
 
         <button type="submit">Besichtigungsanfrage absenden</button>
@@ -110,6 +176,20 @@ import Default from "../../components/layout/default.astro";
     </article>
   </main>
 </Default>
+
+<script>
+  const formElement = document.getElementById("contact-form");
+
+  function processSend(e: Event) {
+    e.preventDefault();
+    e.stopPropagation();
+    const x = new FormData(e.target as any);
+    console.log(e.target);
+    console.log(x);
+  }
+
+  formElement?.addEventListener("submit", processSend);
+</script>
 
 <style>
   .contact {

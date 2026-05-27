@@ -1,8 +1,6 @@
 ---
 import Empty from "../../components/layout/empty.astro";
 import "../../styles/game.css";
-// import "../../assets/js/dom";
-// import "../../assets/js/game";
 ---
 
 <Empty pageTitle="Allein - Ein streunendes Spiel">
@@ -324,6 +322,8 @@ import "../../styles/game.css";
     </div>
   </footer>
 
-  <script src="/dom.js" is:bundled type="module"></script>
-  <script src="/game.js" is:bundled type="module"></script>
+  <script type="module">
+    import "../../scripts/dom";
+    import "../../scripts/game";
+  </script>
 </Empty>
