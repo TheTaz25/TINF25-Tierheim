@@ -1,4 +1,10 @@
 :80 {
-  root * /srv
-  file_server
+  handle /api/* {
+		reverse_proxy backend:80
+	}
+
+	handle {
+		root * /usr/share/caddy
+		file_server
+	}
 }

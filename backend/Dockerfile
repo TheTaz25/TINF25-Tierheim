@@ -1,6 +1,6 @@
 FROM node:24-alpine AS base
 
-COPY . /app
+COPY ./backend /app
 WORKDIR /app
 
 FROM base AS build
